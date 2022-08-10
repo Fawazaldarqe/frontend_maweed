@@ -1,0 +1,12 @@
+{
+  "dependencies": {
+    "bootstrap": "^5.2.0",
+    "country-state-city": "^3.0.1",
+    "formik": "^2.2.9",
+    "react-bootstrap": "^2.5.0",
+    "react-icons": "^4.4.0",
+    "react-phone-number-input": "^3.2.6",
+    "react-select": "^5.4.0",
+    "react-select-country-list": "^2.2.3"
+  }
+}

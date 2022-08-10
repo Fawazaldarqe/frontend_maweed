@@ -1,0 +1,62 @@
+body{
+    margin: 0px;
+}
+.nav1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    flex-direction: row;
+    background-color:#E7F0ED ;
+    height: 65px;
+
+}
+
+#logo_nav{
+display: flex;
+justify-content: center;
+align-items: center;
+width: 20%;
+flex-direction: row;
+}
+.left_nav1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-left: -6vh;
+}
+.language_option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #E7F0ED;
+    border: hidden;
+    font-size: 20px;
+    font-weight: bold;
+    width: 10%;
+    margin-left: -1vh;
+}
+.right_nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    margin-right: 2vh;
+}
+#signin_btn{
+    width: 70%;
+    height: 4vh;
+    background-color: #E7F0ED;
+    border: hidden;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: -1vh;
+}
+#signin_btn:hover{
+    background-color:#cad3d0 ;
+    border-radius: 20px;
+}
