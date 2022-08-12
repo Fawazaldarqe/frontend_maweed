@@ -1,2 +1,5 @@
 @import './Styles/Patiant/nav1.css';
-@import './Styles/Patiant//reserv.css'
+@import './Styles/Patiant//reserv.css';
+@import './Styles//Patiant/homepatiant.css';
+@import './Styles/Patiant/message.css';
+@import './Styles/Doctor/login.css'

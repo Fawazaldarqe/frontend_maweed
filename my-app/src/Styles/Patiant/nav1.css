@@ -43,11 +43,11 @@ flex-direction: row;
     justify-content: center;
     align-items: center;
     text-align: center;
-    gap: 10px;
+    gap: 5px;
     margin-right: 2vh;
 }
 #signin_btn{
-    width: 70%;
+    width: 100%;
     height: 4vh;
     background-color: #E7F0ED;
     border: hidden;
@@ -58,5 +58,5 @@ flex-direction: row;
 }
 #signin_btn:hover{
     background-color:#cad3d0 ;
-    border-radius: 20px;
+    border-radius: 8px;
 }

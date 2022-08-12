@@ -2,6 +2,7 @@ import {GrLanguage} from "react-icons/gr";
 import {WiMoonWaningCrescent2} from "react-icons/wi";
 import {BiUser} from "react-icons/bi";
 import {AiOutlineMenu} from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 export function Nav1(){
     return(
@@ -21,7 +22,9 @@ export function Nav1(){
            <WiMoonWaningCrescent2 size={30} />
 
                <BiUser size={25}/>
-               <button id='signin_btn'>signin doctor</button>
+               <Link to={'/login'}>
+               <button id='signin_btn'>login</button>
+               </Link>
                <AiOutlineMenu size={30}/>
            </div>
            

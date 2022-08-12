@@ -1,0 +1,9 @@
+#title_login{
+    display: flex;
+    justify-content: center;
+    padding-top: 20vh;
+}
+#btn_login{
+    margin-left: 40%;
+    padding: 10px 25px;
+}

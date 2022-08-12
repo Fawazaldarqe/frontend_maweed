@@ -2,6 +2,7 @@
   "dependencies": {
     "bootstrap": "^5.2.0",
     "country-state-city": "^3.0.1",
+    "firebase": "^9.9.2",
     "formik": "^2.2.9",
     "react-bootstrap": "^2.5.0",
     "react-icons": "^4.4.0",

@@ -3,17 +3,29 @@ import PhoneInput from 'react-phone-number-input'
 import React, { useState, useMemo} from "react";
 import Select from 'react-select';
 import countryList from 'react-select-country-list';
+import { Link } from 'react-router-dom';
 export function Reserv(){
     return(
         
         <>               
-
+                <div className='info'>
                 <Nav1></Nav1>
+                <div className='info_patiant'>
                 <Info1/>
+                <div className='info_connect'>
                 <PhonePatiant/>
                 <SelectCountry/>
-                <Infopatiant/>
+                </div>
+                <div className='Old_Medical'>
+                {/* <InfoOld/> */}
+               
+
                 <TypeMajor/>
+                <DateReserv/>
+                </div>
+                <Agree/>
+                </div>
+                </div>
         </>
     )
 }
@@ -21,9 +33,9 @@ export function Info1(){
     return(
         <>
         <div className='info1'>
-        <input type="text" minLength={2} maxLength={8} placeholder='First name' required/>
-        <input type="text" minLength={1} maxLength={8} placeholder='Middle name' required/>
-        <input type="text"minLength={1} maxLength={8} placeholder='Last name' required/>
+        <input id='info1_input1' type="text" minLength={2} maxLength={8} placeholder='First name' required />
+        <input id='info1_input2' type="text" minLength={1} maxLength={8} placeholder='Middle name' required/>
+        <input id='info1_input3' type="text"minLength={1} maxLength={8} placeholder='Last name' required/>
         </div>
         </>
     )
@@ -35,8 +47,9 @@ export function PhonePatiant(){
     return(
         <>
         <div className='info2'>
-        <PhoneInput
-  placeholder="Enter phone number"
+        <PhoneInput id='info2_input'
+        
+     placeholder="phone "
   value={value}
   onChange={setValue}/>
   </div>
@@ -54,72 +67,74 @@ export function SelectCountry(){
     return(
         <>
         <div className='info3'>
-         <Select options={options} value={value} onChange={changeHandler} />
-         <input type="tel" placeholder='Id number'/>
+         <Select  placeholder='Nationality' options={options} value={value} onChange={changeHandler} />
+         <input  id='info3_input' type="tel" placeholder='Id number'/>
+         <br />
          </div>
         </>
     )
 }
-export function Infopatiant(){
+export function InfoOld(){
     return(
         <>
-        <div className='info_patiant'>
-        <label htmlFor="old"></label>
-        <input type="number" min='0' max='100' name='old' placeholder='old'/>
+        <div className='info_Old'>
+        <input  type="text" id='description3' placeholder='description'/>
+
         </div>
         </>
     )
 }
 const data = {
-    Medicalـspeciality: [
+    Medical_speciality: [
       {
         name: "Dermatology",
-        states: [
+        emergency: [
           {
-            name: "A",
-            cities: ["Dermatology", "Neurology", "Obstetrics and gynecology"]
+            name: "non-emergency",
+            Dr_names: ["Dr fatemah", "Dr fadi", "Dr hadi"]
           }
         ]
       },
-      { name: "Neurology", states: [{ name: "B", cities: ["Barcelona"] }] },
+      { name: "Neurology", emergency: [{ name: "non-emergency", Dr_names: ["Dr Ali","Dr Saad","Dr Ahmed","Dr Sara"] }] },
   
-      { name: "Obstetrics and gynecology", states: [{ name: "C", cities: ["Downers Grove"] }] },
+      { name: "Obstetrics and gynecology", emergency: [{ name: "non-emergency", Dr_names: ["Dr sara","Dr safe","Dr falah"] }] },
       {
         name: "Pathology",
-        states: [{ name: ["D", "F", "H"], cities: ["Puebla"] }]
+        emergency: [{ name: "non-emergency", Dr_names: ["Dr Ahmed","Dr Ali","Dr mohammed"] }]
       },
       {
         name: "Pediatrics",
-        states: [
-          { name: "E", cities: ["Delhi", "Kolkata", "Mumbai", "Bangalore"] }
+        emergency: [
+          { name: "non-emergency", Dr_names: ["Dr hamd", "Dr rama","Dr salm", "Dr Ali"] }
         ]
       }
     ]
   };
   
 export default function TypeMajor(){
-    const [selectedCountry, setSelectedCountry] = React.useState();
-  const [selectedState, setSelectedState] = React.useState();
-  const [selectedCity, setSelectedCity] = React.useState();
+    const [selectMedical, setselectMedical] = React.useState();
+  const [selectEmergency, setselectEmergency] = React.useState();
+  const [selectDoctor, setselectDoctor] = React.useState();
 
-  const availableState = data.Medicalـspeciality.find((c) => c.name === selectedCountry);
-  const availableCities = availableState?.states?.find(
-    (s) => s.name === selectedState
+  const availableEmergency = data.Medical_speciality.find((c) => c.name === selectMedical);
+  const availableDr_names = availableEmergency?.emergency?.find(
+    (s) => s.name === selectEmergency
   );
     return(
         <>
+        <div className='options_description'>
+            <div className='options'>
        <div id="container">
-      <h2>Cascading or Dependent Dropdown using React</h2>
 
       <div>
-        <label>Country</label>
-        <select
-          placeholder="Country"
-          value={selectedCountry}
-          onChange={(e) => setSelectedCountry(e.target.value)}
+        {/* <label>Medical speciality</label> */}
+        <select id='Medical_option'
+          placeholder="Medical"
+          value={selectMedical}
+          onChange={(e) => setselectMedical(e.target.value)}
         >
-          <option>--Choose Country--</option>
-          {data.Medicalـspeciality.map((value, key) => {
+          <option>select Medical speciality</option>
+          {data.Medical_speciality.map((value, key) => {
             return (
               <option value={value.name} key={key}>
                 {value.name}
@@ -130,14 +145,14 @@ export default function TypeMajor(){
       </div>
 
       <div>
-        <label>State</label>
-        <select
-          placeholder="State"
-          value={selectedState}
-          onChange={(e) => setSelectedState(e.target.value)}
+        {/* <label>Select emergency</label> */}
+        <select id='Emrgency_option'
+          placeholder="Emergency"
+          value={selectEmergency}
+          onChange={(e) => setselectEmergency(e.target.value)}
         >
-          <option>--Choose State--</option>
-          {availableState?.states.map((e, key) => {
+          <option>Select emergency</option>
+          {availableEmergency?.emergency.map((e, key) => {
             return (
               <option value={e.name} key={key}>
                 {e.name}
@@ -148,14 +163,14 @@ export default function TypeMajor(){
       </div>
 
       <div>
-        <label>City</label>
-        <select
-          placeholder="City"
-          value={selectedCity}
-          onChange={(e) => setSelectedCity(e.target.value)}
+        {/* <label>Doctors names</label> */}
+        <select id='Doctor_option'
+          placeholder="Doctors"
+          value={selectDoctor}
+          onChange={(e) => setselectDoctor(e.target.value)}
         >
-          <option>--Choose City--</option>
-          {availableCities?.cities.map((e, key) => {
+          <option>Select Doctor</option>
+          {availableDr_names?.Dr_names.map((e, key) => {
             return (
               <option value={e.name} key={key}>
                 {e}
@@ -165,6 +180,37 @@ export default function TypeMajor(){
         </select>
       </div>
     </div>
+    </div>
+            <div className='description'>
+            <input id='description2' type="number" min='0' max='100' name='old' placeholder='old'/>
+
+            </div>
+    </div>
+        </>
+    )
+}
+export function DateReserv(){
+    return(
+        <>
+        <div className='select_date'>
+        <input  id='select_date_input' type="date" />
+        </div>
+        </>
+    )
+}
+export function Agree(){
+    return(
+        <>
+        <br />
+        <div className='agree'>
+        <input type="checkbox" /><label>Iam agree........</label>
+        </div>
+        <br />
+        <div className='contioue_reserv'>
+            <Link to={'/message'}>
+        <button id='btn_contioue_reserv' type='submit'>Continou</button>
+        </Link>
+        </div>
         </>
     )
 }

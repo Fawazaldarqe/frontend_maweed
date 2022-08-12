@@ -1,3 +1,6 @@
+body{
+   background-color: #FAFAFA; 
+}
 :root {
 	--PhoneInput-color--focus: #03b2cb;
 	--PhoneInputInternationalIconPhone-opacity: 0.8;
@@ -133,4 +136,151 @@
 }
 .personal_info3{
     width: 20vh;
+}
+.info{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color:#FAFAFA; */
+}
+.info_patiant{
+    margin-top: 8vh;
+}
+.info1{
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    border-radius: 18px;
+}
+
+.info2{
+display: flex;
+justify-content: center;
+margin: 2%;
+}
+.info3{
+    display: flex;
+    justify-content: center;
+    gap: 2vh;
+}
+.info_connect{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+.info_Old{
+    display: block;
+    justify-content: center;
+	margin-top: -13vh;
+ top: 23vh;
+    border-radius: 6px;
+    }
+#description3{
+    border-radius: 6px;
+    border: 0px;
+
+}
+.Old_Medical{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    gap: 15vh;
+    margin-bottom:-2;
+padding: 2vh;
+}
+.select_date{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2%;
+}
+.agree{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+}
+.contioue_reserv{
+display: flex;
+justify-content: center;
+border: 10px;
+}
+#btn_contioue_reserv{
+    background-color: rgb(69, 206, 115);
+    border: 0px;
+    padding: 5px 25px;
+    border-radius: 20px;
+
+}
+#info1_input1{
+    width: 25vh;
+    border-radius: 6px;
+    border: 0px;
+
+}
+#info1_input2{
+    width: 25vh;
+    border-radius: 6px;
+    border: 0px;
+
+
+}
+#info1_input3{
+    width: 25vh;
+    border-radius: 6px;
+    border: 0px;
+
+
+}
+#info2_input{
+    border-radius: 6px;
+    border: 0px;
+
+}
+#info3_input{
+    border-radius: 6px;
+    border: 0px;
+
+}
+#select_date_input{
+    border-radius: 6px;
+    border: 0px;
+
+}
+#container{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    width: 20vh;
+    /* align-items: center; */
+    /* text-align: center; */
+    margin: 20px;
+    gap: 20px;
+}
+#Emrgency_option{
+    width:28vh;
+    margin: 10px;
+    border-radius: 6px;
+    border: 0px;
+
+
+
+}
+#Medical_option{
+    width:28vh;
+    margin: 10px;
+    border-radius: 6px;
+    border: 0px;
+}
+#Doctor_option{
+    width:28vh;
+    margin: 10px;
+    border-radius: 6px;
+    border: 0px;
+}
+#description2{
+    margin-left: 25vh;
+    border-radius: 6px;
+    border: 0px;
+
 }
