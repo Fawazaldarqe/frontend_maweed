@@ -1,0 +1,16 @@
+{
+   " myAppointments":{
+       "0":{
+           "date":"2022-8-14T08:30",
+           "userId":"1234ab"
+       },
+       "new_activity_7kh3a303z":{
+        "date":"2022-8-14T08:40",
+        "userId":"_1234awb"
+    },
+    "new_activity_7kh3a304z":{
+        "date":"2022-8-14T08:50",
+        "userId":"1234qb"
+    }
+   }
+}

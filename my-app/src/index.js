@@ -11,21 +11,22 @@ import {CheckPatiant} from './Components/Doctor/Check_file_for_patiant';
 import {HistoryPatiant} from './Components/Doctor/History_patiant'
 import './index.css';
 import App from './App';
+import {InfoReserv} from './Components/Add_book';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-
+import BooksList from './Components/Doctor/Show_reserv'
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
   <Routes>
     <Route path='/' element={< Homepatiant/>} />
-    <Route path='/reserv' element={< Reserv/>} />
+    <Route path='/reserv' element={< InfoReserv/>} />
     <Route path='/message' element={< Messagesuccessful/>} />
     <Route path='/login' element={< LoginDoctor/>} />
     <Route path='/home_doctor' element={< HomeDoctor/>} />
-    <Route path='/show_reserv' element={< ShowReserv/>} />
+    <Route path='/show_reserv' element={< BooksList/>} />
     <Route path='/check_patiant' element={< CheckPatiant/>} />
-    <Route path='/History_Patiant' element={< HistoryPatiant/>} />
+    <Route path='/history_Patiant' element={< HistoryPatiant/>} />
   </Routes>
 </BrowserRouter>
 );

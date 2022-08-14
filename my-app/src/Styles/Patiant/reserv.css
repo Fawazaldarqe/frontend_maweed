@@ -140,6 +140,9 @@ body{
 .info{
     display: flex;
     justify-content: center;
+	width: 30%;
+	text-align: center;
+	margin-left: 35%;
     flex-direction: column;
     /* background-color:#FAFAFA; */
 }
@@ -284,3 +287,12 @@ border: 10px;
     border: 0px;
 
 }
+#select_date_input:invalid +span:after{
+   content: 'Unavailable';
+   color: red;
+   
+}
+#select_date_input:valid +span:after{
+	content: 'available';
+	color: green;
+ }

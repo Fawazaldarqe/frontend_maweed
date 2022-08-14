@@ -54,7 +54,7 @@ export function ChangeImage(){
 export function BtnGoReserv(){
         return (<>
         <div className='test2'>
-        <h3 id='Welcome'>Welcome to Maweed .....</h3>
+        <h3 id='Welcome'>Welcome to Maweed, we wish you a speedy recovery, you can book an appointment by clicking here.</h3>
         <Link to={'/reserv'}>
         <Button variant="outline-success">Continou</Button>{' '}
         </Link>

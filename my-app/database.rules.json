@@ -1,0 +1,9 @@
+{
+  "rules": {
+    ".read": "now < 1662930000000",  
+    ".write": "now < 1662930000000",  
+    "myAppointments":{
+      ".indexOn":["date"]
+    }
+  }
+}

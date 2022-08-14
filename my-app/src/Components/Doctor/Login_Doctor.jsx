@@ -1,7 +1,7 @@
 import React, { useState ,useRef } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import {Nav1} from'../Patiant/Nav1'
-import { signup ,login } from "../../firebase";
+// import { signup ,login } from "../../fire";
 import { Link } from "react-router-dom";
 
 
@@ -10,25 +10,25 @@ export function LoginDoctor(){
     const emailRef =useRef();
     const passwordRef =useRef();
 
-   async function handleSignup(){
-    setLoading(true)
-       try{
-        await signup(emailRef.current.value,passwordRef.current.value)
-       }catch{
-           alert('this is account already saved ')
-       }
-       setLoading(false)
-    }
+  //  async function handleSignup(){
+  //   setLoading(true)
+  //      try{
+  //       await signup(emailRef.current.value,passwordRef.current.value)
+  //      }catch{
+  //          alert('this is account already saved ')
+  //      }
+  //      setLoading(false)
+  //   }
 
-    async function handleLogin(){
-        setLoading(true)
-           try{
-            await login(emailRef.current.value,passwordRef.current.value)
-           }catch{
-               alert('error email or password ')
-           }
-           setLoading(false)
-        }
+    // async function handleLogin(){
+    //     setLoading(true)
+    //        try{
+    //         await login(emailRef.current.value,passwordRef.current.value)
+    //        }catch{
+    //            alert('error email or password ')
+    //        }
+    //        setLoading(false)
+    //     }
     const [password, setPassword] = useState("");
   const [email, setEmail] = useState("");
   const [passwordError, setpasswordError] = useState("");
@@ -113,14 +113,14 @@ export function LoginDoctor(){
                 />
                 <label className="form-check-label">Check me out</label> */}
               </div>
-              
-              <button onClick={handleLogin}  id='btn_login' type="submit" className="btn btn-primary">
+              <Link to={'/home_doctor'}>
+              <button  id='btn_login' type="submit" className="btn btn-primary">
                 Login
               </button>
-             
-              <button disabled={loading} onClick={handleSignup} id='singup' type="submit" className="btn btn-primary">
+              </Link>
+              {/* <button disabled={loading}  id='singup' type="submit" className="btn btn-primary">
                 singup
-              </button>
+              </button> */}
             </form>
           </div>
         </div>
